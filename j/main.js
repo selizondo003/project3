@@ -58,16 +58,16 @@ document.addEventListener("DOMContentLoaded", (e) => {
         "click",
          function (e) {
             e.preventDefault();
-            webvttTranscript("subtitles/spanish.vtt", display);
+            webvttTranscript("subtitles/es.vtt", display);
         });
     
     transcript_fr.addEventListener(
         "click",
         function (e) {
             e.preventDefault();
-            webvttTranscript("subtitles/french.vtt", display);
+            webvttTranscript("subtitles/fr.vtt", display);
         });
-        
+
     showHide.addEventListener(
          "click",
         function (e) {
