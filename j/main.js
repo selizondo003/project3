@@ -9,6 +9,13 @@ const mypause = document.getElementById('mypause');
 const mymute = document.getElementById('mymute');
 const myunmute = document.getElementById('myunmute');
 
+const selectVid = document.querySelector("#video_select");
+const selectTxt = document.querySelector("#text-track");
+const display = document.getElementById("transcript");
+const transcript_en = document.getElementById("transcript-en");
+const showHide = document.getElementById("show-hide");
+
+
 
 //section list
 const saveMovement = document.getElementById('saveMovement');
@@ -38,6 +45,34 @@ myunmute.addEventListener('click', (e) => {
     unmuteVid(vid);
 });
 
+selectVid.addEventListener("change", (e) => {
+    selectVideo(e, vid);
+});
+
+selectTxt.addEventListener("change", (e) => {
+    const id = e.target.value;
+    selectTrack(e, vid, id);
+});
+
+transcript_en.addEventListener(
+    "click",
+    function (e) {
+        e.preventDefault();
+        webvttTranscript("captions/synergy.vtt", display);
+    });
+    showHide.addEventListener(
+        "click",
+        function (e) {
+            e.preventDefault();
+            webvttTranscript("subtitles/french.vtt", display);
+            if (e.target.innerHTML == "Show Transcript") {
+                e.target.innerHTML = "Hide Transcript";
+                display.style.display = "block";
+            } else {
+                e.target.innerHTML = "Show Transcript";
+                display.style.display = "none";
+            }
+        });
 
 //creating certain sections in video 
 saveMovement.addEventListener('click', (e) => {

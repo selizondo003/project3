@@ -5,15 +5,16 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Lab 5</title>
+	<title>Project 3</title>
 	<link rel="stylesheet" href="c/main.css">
 	<script src="j/video_helpers.js"></script>
+    <script src="j/transcript.js" defer></script>
 	<script src="j/main.js" type="module"></script>
 
 </head>
 
 <body>
-	<h1>Lab 5: HTML5 Video with JS synchronized cuepoints</h1>
+	<h1>Project 3: Media Player</h1>
 	<h2>Why Whale Poop is Important</h2>
 
 	<main id="container">
@@ -23,7 +24,7 @@
 			<video id="vid" class="whale" width="352" controls>
 				<source src="assets/vosWhale.mp4" type="video/mp4">
 				<source src="assets/vosWhale.ogv" type="video/ogg">
-				<track kind="captions" label="On" srclang="en" src="./captions/whale.vtt" default>
+				<track kind="captions" label="English (captions" srclang="en" src="captions/whale.vtt" default>
 
 				<p>Here is a link to the video file itself
 					<a href="assets/vosWhale.mp4">Video here</a>
@@ -113,23 +114,37 @@
 
 			</video>
 
-			<form>
+			
 			<div id="controls">
+                <form id="video_form">
+                    
+                    <fieldset>
+                        <input type="button" id="myplay" onclick="playVideo(vid)" value="Play" />
+                        <input type="button" id="mypause" onclick="pauseVideo(vid)" value="Pause" />
+                        <input type="button" id="mymute" onclick="muteVid(vid)" value="Mute" />
+                        <input type="button" id="myunmute" onclick="unmuteVid(vid)" value="Unmute" />
+                    </fieldset>
 
-				<button id="myplay">play</button>
-				<button id="mypause">pause</button>
-				<button id="mymute">mute</button>
-				<button id="myunmute">unmute</button>
+                    <fieldset>
+						<select id="text-track">
+							<option>Select a subtitle language...</option>
+							<option value="fr">Francais</option>
+							<option value="es">Espanol</option>
+							<option value="en">English caption</option>
+						</select>
+					</fieldset>
 
-			</div>
-			<div id="vidSections">
-				<button id="saveMovement">Save The Whale Movement</button>
-				<button id="ecoEngineer">Whale's as ecosystem engineers</button>
-				<button id="whalePoop">Understanding the importance of Whale Poop </button>
-				<button id="whaleCarcas">Understanding the importance of Whale Carcases</button>
-			</div>
+                    <fieldset>
+                        <div id="vidSections">
+                            <button id="saveMovement">Save The Whale Movement</button>
+                            <button id="ecoEngineer">Whale's as ecosystem engineers</button>
+                            <button id="whalePoop">Understanding the importance of Whale Poop </button>
+                            <button id="whaleCarcas">Understanding the importance of Whale Carcases</button>
+                        </div>
+                    </fieldset>
+                </form>
 		</section>
-			</form>
+			
 
 		<div class="col2">
 			<iframe id="web" src=""></iframe>
