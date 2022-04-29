@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="c/main.css">
 	<script src="j/video_helpers.js"></script>
     <script src="j/transcript.js" defer></script>
-	<script src="j/main.js" type="module"></script>
+	<script type="module" src="j/main.js" ></script>
 
 </head>
 
@@ -24,7 +24,8 @@
 			<video id="vid" class="whale" width="352" controls>
 				<source src="assets/vosWhale.mp4" type="video/mp4">
 				<source src="assets/vosWhale.ogv" type="video/ogg">
-				<track kind="captions" label="English (captions" srclang="en" src="captions/whale.vtt" default>
+                <track id="es" kind="subtitles" label="Espanol" srclang="es" src="subtitles/spanish.vtt">
+				<track id="en" kind="captions" label="English (captions)" srclang="en" src="captions/whale.vtt" default>
 
 				<p>Here is a link to the video file itself
 					<a href="assets/vosWhale.mp4">Video here</a>
@@ -136,13 +137,25 @@
 
                     <fieldset>
                         <div id="vidSections">
-                            <button id="saveMovement">Save The Whale Movement</button>
-                            <button id="ecoEngineer">Whale's as ecosystem engineers</button>
-                            <button id="whalePoop">Understanding the importance of Whale Poop </button>
-                            <button id="whaleCarcas">Understanding the importance of Whale Carcases</button>
+                            
+                            <input type="button" id="saveMovement" onclick="saveMovement" value="Save The Whale Movement" />
+                            <input type="button" id="ecoEngineer" onclick="ecoEngineer" value="Whale's as ecosystem engineers" />
+                            <input type="button" id="whalePoop" onclick="whalePoop" value="Understanding the importance of Whale Poop" />
+                            <input type="button" id="whaleCarcas" onclick="whaleCarcas" value="Understanding the importance of Whale Carcases" />
+
                         </div>
                     </fieldset>
                 </form>
+            </div>
+
+
+            <div class="show-captions">
+                    <h3><a id="show-hide" href="#">Show Transcript</a></h3>
+                    <a id="transcript-en" href="#">English</a>
+                    <a id="transcript-es" href="#">Spanish</a>
+                    <a id="transcript-fr" href="#">French</a>
+                    <div id="transcript"></div>
+            </div>
 		</section>
 			
 

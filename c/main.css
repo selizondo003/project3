@@ -67,7 +67,7 @@
   
   /* show the timings in square brackets before each "subtitle" in the transcript. */
   #transcript [data-begin]:before {
-    content: " ["attr(data-begin) "s-"attr(data-end)"s]   ";
+    content: " [" attr(data-begin) "s-" attr(data-end)"s]   ";
     font-size: 80%;
     display: table-cell;
     padding-right: 1em;
