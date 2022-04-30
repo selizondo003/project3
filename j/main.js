@@ -1,6 +1,4 @@
-import {
-    cueTimer
-} from "./modules/cuepoints.js";
+import { cueTimer } from "./modules/cuepoints.js";
 
 
 document.addEventListener("DOMContentLoaded", (e) => {
@@ -19,7 +17,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
     cueTimer.setup("vid", myCues);
 
     const vid = document.querySelector('#vid');
-
     const selectTxt = document.querySelector("#text-track");
     const display = document.getElementById("transcript");
     const transcript_en = document.getElementById("transcript-en");
@@ -27,19 +24,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const transcript_fr = document.getElementById("transcript-fr");
     const showHide = document.getElementById("show-hide");
 
-
-
     //section list
     const saveMovement = document.getElementById('saveMovement');
     const ecoEngineer = document.getElementById('ecoEngineer');
     const whalePoop = document.getElementById('whalePoop');
     const whaleCarcas = document.getElementById('whaleCarcas');
 
-
-   
-
-
-    
 
     selectTxt.addEventListener("change", (e) => {
         const id = e.target.value;
@@ -57,21 +47,21 @@ document.addEventListener("DOMContentLoaded", (e) => {
         "click",
          function (e) {
             e.preventDefault();
-            webvttTranscript("subtitles/es.vtt", display);
+            webvttTranscript("subtitles/spanish.vtt", display);
         });
     
     transcript_fr.addEventListener(
         "click",
         function (e) {
             e.preventDefault();
-            webvttTranscript("subtitles/fr.vtt", display);
+            webvttTranscript("subtitles/french.vtt", display);
         });
 
     showHide.addEventListener(
          "click",
         function (e) {
             e.preventDefault();
-            webvttTranscript("captions/whale.vtt", display);
+            webvttTranscript("subtitles/french.vtt", display);
                 if (e.target.innerHTML == "Show Transcript") {
                     e.target.innerHTML = "Hide Transcript";
                     display.style.display = "block";
@@ -79,7 +69,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
                     e.target.innerHTML = "Show Transcript";
                     display.style.display = "none";
                 }
-            });
+        });
+
 
     //creating certain sections in video 
     saveMovement.addEventListener('click', (e) => {
