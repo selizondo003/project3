@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     // and the array of cuepoint objects.
     cueTimer.setup("vid", myCues);
 
-    const vid = document.querySelector('.whale');
+    const vid = document.querySelector('#vid');
 
     const selectTxt = document.querySelector("#text-track");
     const display = document.getElementById("transcript");
@@ -36,8 +36,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const whaleCarcas = document.getElementById('whaleCarcas');
 
 
-    vid.src = "assets/vosWhale.mp4";
-    vid.load();
+   
 
 
     
