@@ -14,14 +14,15 @@
 </head>
 
 <body>
-	<h1>Project 3: Media Player</h1>
-	<h2>Why Whale Poop is Important</h2>
+
+	<h1>Did you know whale poop is important to the oceans?</h1>
+	<h2>Watch the video below to learn more</h2>
 
 	<main id="container">
 
-		<section class="col1">
+		<section class="row1">
 
-			<video id="vid" width="352" controls>
+			<video id="vid" width="352" poster="images/whalePoster.jpg" controls>
 				<source src="assets/vosWhale.mp4" type="video/mp4">
 				<source src="assets/vosWhale.ogv" type="video/ogg">
 				<track id="fr" kind="subtitles" label="Francais" srclang="fr" src="subtitles/french.vtt">
@@ -121,7 +122,7 @@
                 <form id="video_form">
                     
                     <fieldset>
-                        <input type="button" id="myplay" onclick="playVideo(vid)" value="Play" />
+                        <input type="button" src = "images/imgWhale.jpg" id="myplay" onclick="playVideo(vid)" value="Play" />
                         <input type="button" id="mypause" onclick="pauseVideo(vid)" value="Pause" />
                         <input type="button" id="mymute" onclick="muteVid(vid)" value="Mute" />
                         <input type="button" id="myunmute" onclick="unmuteVid(vid)" value="Unmute" />
@@ -148,6 +149,10 @@
                     </fieldset>
                 </form>
             </div>
+
+			<div class="pop hide">
+				
+			</div>
 
 
             <div class="show-captions">

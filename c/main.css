@@ -4,7 +4,7 @@
   
   body {
     font-family:'Courier New', Courier, monospace ;
-    background-image: linear-gradient(teal, blue);
+    background-image: linear-gradient(teal, blue, black);
   }
   
   h1,
@@ -71,6 +71,24 @@
     display:table-cell;
     padding-right:1em;
   }
+
+  /*styling  captions*/
+  .show-captions {
+    margin:0 auto;
+    text-align: center;
+  }
+
+  .show-captions a[href] {
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(182, 226, 209);
+}
+
+/*styling hover state */
+  .show-captions a:hover {
+    color: #063a2a;
+  }
+  
   
   
   .pop {

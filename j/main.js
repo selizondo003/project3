@@ -5,9 +5,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     var myCues = [
 
-        {seconds: 11,callback: bG},
         {seconds: 2,callback: image},
+        {seconds: 4,callback: bG},
         {seconds: 97, callback: engineer},
+        {seconds: 109, callback: fun},
         {seconds: 152, callback: feces}
     ];
 
@@ -55,10 +56,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
         function (e) {
             e.preventDefault();
             webvttTranscript("subtitles/french.vtt", display);
+            console.log("french transcript")
         });
 
     showHide.addEventListener(
-         "click",
+        "click",
         function (e) {
             e.preventDefault();
             webvttTranscript("subtitles/french.vtt", display);
@@ -69,6 +71,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                     e.target.innerHTML = "Show Transcript";
                     display.style.display = "none";
                 }
+                console.log("test-showHide")
         });
 
 
@@ -113,6 +116,15 @@ function engineer() {
 
     document.getElementById("web").src = "https://www.uvm.edu/news/story/whales-ecosystem-engineers";
 };
+
+function fun() {
+    let pop = document.querySelector(".pop");
+    pop.innerHTML = "<p>Whales are SUPER cool!</p>";
+    document.querySelector(".pop").classList.toggle("hide");
+    setTimeout(() => {
+        document.querySelector(".pop").classList.toggle("hide");
+    }, 2000);
+}
 
 function feces() {
     document.getElementById("web").src = "images/WhalePump.jpg";
