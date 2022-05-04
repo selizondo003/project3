@@ -3,32 +3,26 @@
   }
   
   body {
-    font-family: sans-serif;
-    background: rgb(204, 219, 240);
+    font-family:'Courier New', Courier, monospace ;
+    background-image: linear-gradient(teal, blue);
   }
   
   h1,
-  h2 {
+  h2{
     text-align: center;
-  }
-  
-  #container {
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-columns: 1fr 2fr;
-    position: relative;
-    margin: auto;
-    max-width: 1024px;
   }
   
   
   #vid {
-    width: 352px;
-    height: 288px;
+    display: block;
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
   }
   
-  .col1 {
-    border: 1px solid black;
+  .row1 {
+    
     height: fit-content;
   }
   
@@ -38,12 +32,17 @@
     height: 1500px;
     padding: 0;
     overflow: hidden;
+    display: block;
+    margin: 0 auto;
   }
   
   
   iframe {
     width: 100%;
     height: 100vh;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
   }
   
   #caption {
@@ -67,7 +66,7 @@
   
   /* show the timings in square brackets before each "subtitle" in the transcript. */
   #transcript [data-begin]:before {
-    content: " [" attr(data-begin) "s-" attr(data-end)"s]   ";
+    content: " [" attr(data-begin) "s-" attr(data-end)"s] ";
     font-size:80%;
     display:table-cell;
     padding-right:1em;
