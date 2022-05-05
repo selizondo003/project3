@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const vid = document.querySelector('#vid');
     const selectTxt = document.querySelector("#text-track");
     const display = document.getElementById("transcript");
-    const transcript_en = document.getElementById("transcript-en");
+    /*const transcript_en = document.getElementById("transcript-en");
     const transcript_es = document.getElementById("transcript-es");
-    const transcript_fr = document.getElementById("transcript-fr");
+    const transcript_fr = document.getElementById("transcript-fr");*/
     const showHide = document.getElementById("show-hide");
 
     //section list
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
         selectTrack(e, vid, id);
     });
 
-    transcript_en.addEventListener(
+   /* transcript_en.addEventListener(
         "click",
         function (e) {
             e.preventDefault();
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
             webvttTranscript("subtitles/french.vtt", display);
             console.log("french transcript")
         });
-
+*/
     showHide.addEventListener(
         "click",
         function (e) {
