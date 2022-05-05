@@ -80,4 +80,5 @@
 
   // Load the contents of 'file' into 'element'
   load(file, element);
+  console.log(file, element);
 }

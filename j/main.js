@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     var myCues = [
 
         {seconds: 2,callback: image},
-        {seconds: 4,callback: bG},
+        {seconds: 13,callback: bG},
         {seconds: 97, callback: engineer},
         {seconds: 109, callback: fun},
         {seconds: 152, callback: feces}
@@ -63,7 +63,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
         "click",
         function (e) {
             e.preventDefault();
-            webvttTranscript("subtitles/french.vtt", display);
+            
+            //webvttTranscript("captions/whale.vtt", display);
                 if (e.target.innerHTML == "Show Transcript") {
                     e.target.innerHTML = "Hide Transcript";
                     display.style.display = "block";
@@ -104,17 +105,20 @@ document.addEventListener("DOMContentLoaded", (e) => {
 //feel free to rename the functions to be more descriptive of what they do.
 function bG() {
 
-    document.body.style.backgroundColor = "teal";
+    document.getElementById("web").src = "https://en.wikipedia.org/wiki/Right_whale";
+    console.log("wiki");
 };
 
 function image() {
     
     document.getElementById("web").src = "images/imgWhale.jpg";
+    console.log("whale picture");
 };
 
 function engineer() {
 
     document.getElementById("web").src = "https://www.uvm.edu/news/story/whales-ecosystem-engineers";
+    console.log("eco-engineer");
 };
 
 function fun() {
@@ -124,12 +128,14 @@ function fun() {
     setTimeout(() => {
         document.querySelector(".pop").classList.toggle("hide");
     }, 2000);
+    console.log("cool")
 }
 
 function feces() {
     document.getElementById("web").src = "images/WhalePump.jpg";
     pauseVideo(vid);
     alert("Click play after looking over document :)")
+    console.log("feces")
 
 
 };
