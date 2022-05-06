@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const transcript_es = document.getElementById("transcript-es");
     const transcript_fr = document.getElementById("transcript-fr");*/
     const showHide = document.getElementById("show-hide");
-    const myFunc = document.getElementById("myFunction");
+    
 
     //section list
     const saveMovement = document.getElementById('saveMovement');
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
                     e.target.innerHTML = "Show Transcript";
                     display.style.display = "none";
                 }
-                console.log("test-showHide")
+                console.log("test-showHide");
         });
 
 
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 
     setTimeout(function () {
-        console.log("Ready")
+        console.log("Ready");
     }, 5);
 
 
@@ -133,14 +133,14 @@ function fun() {
     setTimeout(() => {
         document.querySelector(".pop").classList.toggle("hide");
     }, 2000);
-    console.log("cool")
+    console.log("cool");
 }
 
 function feces() {
     document.getElementById("web").src = "images/WhalePump.jpg";
     pauseVideo(vid);
-    alert("Click play after looking over document :)")
-    console.log("feces")
+    alert("Click play after looking over document :)");
+    console.log("feces");
 
 
 };
