@@ -14,7 +14,9 @@
   
 .show-captions{
   color: white;
+  max-width: 70%;
 }
+
 
   #vid {
     display: block;
@@ -34,6 +36,22 @@
     
   }
   
+  /* setting up grid pieces*/
+.split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+  .show-captions{
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+  iframe{
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+
   .col2 {
     width: 750px;
     height: 1500px;
@@ -41,6 +59,8 @@
     overflow: hidden;
     display: block;
     margin: 0 auto;
+    text-align: center;
+    color: rgb(182, 226, 209);;
   }
   
   
@@ -133,3 +153,14 @@
       grid-row: 2;
     }
   }
+
+
+  /*button*/
+button{
+  background-color: teal;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  color: white;
+  border-radius: 8px;
+}

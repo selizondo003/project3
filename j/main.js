@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const transcript_es = document.getElementById("transcript-es");
     const transcript_fr = document.getElementById("transcript-fr");*/
     const showHide = document.getElementById("show-hide");
+    const myFunc = document.getElementById("myFunction");
 
     //section list
     const saveMovement = document.getElementById('saveMovement');
@@ -59,6 +60,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
             console.log("french transcript")
         });
 */
+
+
+
+
     showHide.addEventListener(
         "click",
         function (e) {
